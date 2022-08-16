@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 5px;
+}
+
+a {
+    color: black;
+}
+
+img {
+    width: 150px;
+}
+
+.resume-content {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 200px 500px 400px;
+    grid-template-areas:
+        "profile profile profile"
+        "history history info";
+}
+
+.profile {
+    grid-area: profile;
+    display: grid;
+    grid-template-columns: 200px 500px 400px;
+    grid-template-areas:
+        "personal-details prof-summary prof-summary";
+    border-bottom: 1px solid gainsboro;
+}
+
+.personal-details {
+    padding: 20px;
+    grid-area: personal-details;
+    justify-self: start;
+}
+
+.prof-summary {
+    padding: 20px;
+    grid-area: prof-summary ;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.job-title {
+    font-size: 1.5rem;
+}
+
+.candidate-name {
+    font-size: 5rem;
+}
+
+.prof-summary__content {
+    width: 40rem;
+}
+
+.title {
+    font-size: 2.5rem;
+}
+
+.employment-history {
+    padding: 20px;
+    grid-area: history;
+}
+
+.employment-history__item {
+    width: 100%;
+}
+
+.item__job-title {
+    padding: 5px;
+    width: 500px;
+    font-size: 1.3rem;
+    background-color: black;
+    color: white;
+}
+
+.item__period {
+    font-size: 1.2rem;
+    padding: 10px 0;
+}
+
+.other-info {
+    padding: 20px;
+    grid-area: info;
+    justify-self: center;
+}
+
+.other-info__item {
+    width: 90%;
+}
+
+.resume-item {
+    border-radius: 15px;
+    background-color: gainsboro;
+    padding: 15px;
+    margin: 20px;
+}
