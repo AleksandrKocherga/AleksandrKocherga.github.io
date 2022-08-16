@@ -107,3 +107,52 @@ img {
     padding: 15px;
     margin: 20px;
 }
+
+@media (max-width:1100px)  { 
+    .resume-content {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-template-areas:
+            "profile profile"
+            "history history"
+            "info info";
+    }
+    
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .personal-details {
+        padding: 20px;
+        grid-area: personal-details;
+        justify-self: start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .prof-summary {
+        padding: 20px;
+        grid-area: prof-summary ;
+        justify-self: start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .other-info {
+        padding: 20px;
+        grid-area: info;
+        justify-self: start;
+    }
+    
+    .other-info__item {
+        width: 100%;
+    }
+}
