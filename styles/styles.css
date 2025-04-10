@@ -5,154 +5,181 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-p {
+  }
+  
+  p {
     margin: 5px;
-}
-
-a {
+  }
+  
+  a {
     color: black;
-}
-
-img {
+  }
+  
+  img {
     width: 150px;
-}
-
-.resume-content {
+  }
+  
+  .resume-content {
     height: 100vh;
     display: grid;
     grid-template-columns: 200px 500px 400px;
     grid-template-areas:
-        "profile profile profile"
-        "history history info";
-}
-
-.profile {
+      "profile profile profile"
+      "history history info"
+      "footer footer footer";
+  }
+  
+  .profile {
     grid-area: profile;
     display: grid;
     grid-template-columns: 200px 500px 400px;
-    grid-template-areas:
-        "personal-details prof-summary prof-summary";
+    grid-template-areas: "personal-details prof-summary prof-summary";
     border-bottom: 1px solid gainsboro;
-}
-
-.personal-details {
+  }
+  
+  .personal-details {
     padding: 20px;
     grid-area: personal-details;
     justify-self: start;
-}
-
-.prof-summary {
+  }
+  
+  .prof-summary {
     padding: 20px;
-    grid-area: prof-summary ;
+    grid-area: prof-summary;
     justify-self: end;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.job-title {
+  }
+  
+  .job-title {
     font-size: 1.5rem;
-}
-
-.candidate-name {
+  }
+  
+  .candidate-name {
     font-size: 5rem;
-}
-
-.prof-summary__content {
+  }
+  
+  .prof-summary__content {
     width: 40rem;
-}
-
-.title {
+  }
+  
+  .title {
     font-size: 2.5rem;
-}
-
-.employment-history {
+  }
+  
+  .employment-history {
     padding: 20px;
     grid-area: history;
-}
-
-.employment-history__item {
+  }
+  
+  .employment-history__item {
     width: 100%;
-}
-
-.item__job-title {
+  }
+  
+  .item__job-title {
     padding: 5px;
     width: 500px;
     font-size: 1.3rem;
     background-color: black;
     color: white;
-}
-
-.item__period {
+  }
+  
+  .item__period {
     font-size: 1.2rem;
     padding: 10px 0;
-}
-
-.other-info {
+  }
+  
+  .other-info {
     padding: 20px;
     grid-area: info;
     justify-self: center;
-}
-
-.other-info__item {
+  }
+  
+  .other-info__item {
     width: 90%;
-}
-
-.resume-item {
+  }
+  
+  .resume-item {
     border-radius: 15px;
     background-color: gainsboro;
     padding: 15px;
     margin: 20px;
-}
-
-@media (max-width:1100px)  { 
+  }
+  
+  .download-container {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 98%;
+    padding-bottom: 15px;
+  }
+  
+  .download-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .download-button img {
+    width: 16px;
+    height: 16px;
+    display: block;
+  }
+  
+  @media (max-width: 1100px) {
     .resume-content {
-        height: 100vh;
-        width: 100vw;
-        display: grid;
-        grid-template-areas:
-            "profile profile"
-            "history history"
-            "info info";
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      grid-template-areas:
+        "profile profile"
+        "history history"
+        "info info";
     }
-    
+  
     .profile {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-
+  
     .personal-details {
-        padding: 20px;
-        grid-area: personal-details;
-        justify-self: start;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      padding: 20px;
+      grid-area: personal-details;
+      justify-self: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-    
+  
     .prof-summary {
-        padding: 20px;
-        grid-area: prof-summary ;
-        justify-self: start;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      padding: 20px;
+      grid-area: prof-summary;
+      justify-self: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-
+  
     .other-info {
-        padding: 20px;
-        grid-area: info;
-        justify-self: start;
+      padding: 20px;
+      grid-area: info;
+      justify-self: start;
     }
-    
+  
     .other-info__item {
-        width: 100%;
+      width: 100%;
     }
-}
+  
+    .download-container {
+      display: none;
+    }
+  }
+  

@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>    
+    <script type="module" src="script.js" defer></script>
     <title>Kocherga Aleksandr resume</title>
 </head>
 
@@ -153,23 +155,12 @@
                 <p>Extreme sports.</p>
             </div>
         </div>
+        <div class="download-container">
+            <button class="download-button" title="Download .pdf">
+                <img src="./public/icon/download-icon.png" alt="download-icon">
+            </button>
+        </div>
     </div>
-    
-    <button onclick="downloadPDF()">Скачать в PDF</button>
-
-      <script>
-        function downloadPDF() {
-          const element = document.getElementById('resume');
-          const options = {
-            margin:       0.5,
-            filename:     'resume.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2 },
-            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-          };
-          html2pdf().set(options).from(element).save();
-        }
-      </script>
 </body>
 
 </html>
