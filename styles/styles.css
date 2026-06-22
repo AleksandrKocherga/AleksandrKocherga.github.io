@@ -97,6 +97,7 @@ body {
     font-size: 1.3rem;
     background-color: black;
     color: white;
+    margin-top: 30px;
   }
   
   .item__period {
@@ -118,6 +119,15 @@ body {
     background-color: gainsboro;
     padding: 15px;
     margin: 20px;
+  }
+
+  .skills-group {
+    font-weight: 600;
+    margin: 12px 0 4px;
+  }
+
+  .skills-group:first-of-type {
+    margin-top: 0;
   }
   
   .download-container {
