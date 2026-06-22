@@ -11,9 +11,6 @@
     <meta property="og:description"
         content="Senior Frontend Engineer (React / TypeScript) with 5+ years of experience building production-grade web platforms.">
     <link rel="stylesheet" type="text/css" href="styles/styles.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>    
-    <script type="module" src="script.js" defer></script>
     <title>Kocherga Aleksandr resume</title>
 </head>
 
@@ -223,9 +220,10 @@
             </div>
         </div>
         <div class="download-container">
-            <button class="download-button" type="button" title="Download .pdf" aria-label="Download resume as PDF">
+            <a class="download-button" href="./public/resume.pdf" target="_blank" rel="noopener noreferrer"
+                title="Open .pdf" aria-label="Open resume PDF in a new tab">
                 <img src="./public/icon/download-icon.png" alt="">
-            </button>
+            </a>
         </div>
     </div>
 </body>

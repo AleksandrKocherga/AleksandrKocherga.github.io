@@ -121,6 +121,25 @@ body {
     margin: 20px;
   }
 
+  .tech-stack__title {
+    font-weight: 600;
+    margin: 10px 5px 2px;
+  }
+
+  .tech-stack__list {
+    list-style: none;
+    margin: 0 5px 5px;
+    padding: 0;
+  }
+
+  .tech-stack__list li {
+    display: inline;
+  }
+
+  .tech-stack__list li:not(:last-child)::after {
+    content: ", ";
+  }
+
   .skills-group {
     font-weight: 600;
     margin: 12px 0 4px;
@@ -140,6 +159,8 @@ body {
   }
   
   .download-button {
+    display: inline-flex;
+    align-items: center;
     background: none;
     border: none;
     padding: 0;
@@ -231,4 +252,118 @@ body {
       margin: 10px;
     }
   }
-  
+
+  @media print {
+    @page {
+      size: A4;
+      margin: 12mm;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 0;
+      display: block;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      font-size: 11px;
+    }
+
+    /* Фиксированные колонки как на сайте: слева опыт, справа серые блоки.
+       Переопределяем grid явно — печатная ширина < 1100px и иначе сработает
+       мобильный брейкпоинт с одной колонкой. */
+    .resume-content {
+      min-height: 0;
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 4fr);
+      grid-template-areas:
+        "profile profile"
+        "history info";
+    }
+
+    .profile {
+      grid-area: profile;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 16px;
+    }
+
+    .personal-details {
+      display: block;
+    }
+
+    .employment-history {
+      grid-area: history;
+      padding: 0 16px 0 0;
+    }
+
+    .other-info {
+      grid-area: info;
+      justify-self: stretch;
+      padding: 0 0 0 16px;
+    }
+
+    .prof-summary {
+      grid-area: prof-summary;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0 20px;
+    }
+
+    .prof-summary__content {
+      max-width: 100%;
+    }
+
+    .item__job-title,
+    .resume-item {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .candidate-name {
+      font-size: 2.4rem;
+      margin-right: 0;
+    }
+
+    .job-title {
+      font-size: 1.1rem;
+    }
+
+    .title {
+      font-size: 1.2rem;
+    }
+
+    .item__job-title {
+      font-size: 1rem;
+      margin-top: 16px;
+    }
+
+    .item__period {
+      font-size: 1rem;
+    }
+
+    img {
+      width: 110px;
+    }
+
+    .resume-item {
+      margin: 10px 0;
+    }
+
+    /* Маленькие блоки держим целиком; крупный опыт выше страницы — разбиваем */
+    .tech-stack,
+    .other-info__item {
+      break-inside: avoid;
+    }
+
+    .item__job-title {
+      break-after: avoid;
+    }
+
+    .download-container {
+      display: none;
+    }
+  }
