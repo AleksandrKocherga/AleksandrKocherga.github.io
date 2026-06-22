@@ -58,7 +58,7 @@ body {
     justify-self: end;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
   }
   
@@ -68,6 +68,7 @@ body {
   
   .candidate-name {
     font-size: 5rem;
+    margin-right: 20px;
   }
   
   .prof-summary__content {
@@ -76,7 +77,9 @@ body {
   }
   
   .title {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin: 0 0 0.6rem;
   }
   
   .employment-history {
@@ -104,11 +107,10 @@ body {
   .other-info {
     padding: 20px;
     grid-area: info;
-    justify-self: center;
   }
-  
+
   .other-info__item {
-    width: 90%;
+    width: auto;
   }
   
   .resume-item {
@@ -177,6 +179,10 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+    }
+
+    .candidate-name {
+      margin-right: 0;
     }
   
     .other-info {
